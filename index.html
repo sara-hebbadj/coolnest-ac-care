@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CoolNest AC Care concept website for easy AC cleaning, repair, and maintenance booking across Dubai.">
+  <title>CoolNest AC Care | Cleaner air. Reliable cooling. Zero hassle.</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html" aria-label="CoolNest AC Care home">
+        <span class="logo-mark" aria-hidden="true">❄</span><span>CoolNest AC Care</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="services.html">Services</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#care-plans">Care Plans</a>
+        <a href="#about">About</a>
+        <a class="btn btn-primary btn-sm" href="booking.html">Book a Service</a>
+        <a href="dashboard.html">Owner Dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow prototype-badge">Fictional Sliubar concept project</span>
+          <h1>Reliable cooling, booked without the <span>usual hassle.</span></h1>
+          <p class="lead">Tell CoolNest what is happening, receive a clear service recommendation, and request a convenient AC appointment in minutes.</p>
+          <div class="button-row">
+            <a class="btn btn-primary" href="booking.html">Book an AC Service <span aria-hidden="true">→</span></a>
+            <a class="btn btn-secondary" href="#diagnose">Diagnose My AC Problem</a>
+          </div>
+          <div class="trust-row" aria-label="Service highlights">
+            <span class="trust-chip"><span class="check-dot">✓</span> Clear demo pricing</span>
+            <span class="trust-chip"><span class="check-dot">✓</span> Easy online booking</span>
+            <span class="trust-chip"><span class="check-dot">✓</span> Residential AC focus</span>
+            <span class="trust-chip"><span class="check-dot">✓</span> Dubai coverage concept</span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Illustration of a modern air conditioning service experience">
+          <div class="visual-shell">
+            <div class="ac-unit"></div>
+            <div class="air-wave"></div><div class="air-wave two"></div><div class="air-wave three"></div>
+          </div>
+          <div class="visual-card card-a"><strong>Request received</strong><small>Complete details in one place</small></div>
+          <div class="visual-card card-b"><strong>Appointment selected</strong><small>Tomorrow · 9:00–11:00 AM</small></div>
+          <div class="visual-card card-c"><strong>Nora can help</strong><small>Service recommendation assistant</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="diagnose">
+      <div class="container diagnosis-wrap">
+        <div>
+          <span class="eyebrow">Service finder</span>
+          <h2>What is happening with your AC?</h2>
+          <p class="lead">Choose the closest symptom. The recommendation is a starting point, not a technical diagnosis.</p>
+          <div class="issue-grid" role="group" aria-label="Choose an AC issue">
+            <button class="issue-button" type="button" data-issue="AC not cooling">🥵 AC not cooling</button>
+            <button class="issue-button" type="button" data-issue="Water leaking">💧 Water leaking</button>
+            <button class="issue-button" type="button" data-issue="Strange smell">🌬 Strange smell</button>
+            <button class="issue-button" type="button" data-issue="Unusual noise">🔊 Unusual noise</button>
+            <button class="issue-button" type="button" data-issue="High electricity bill">⚡ High electricity bill</button>
+            <button class="issue-button" type="button" data-issue="Routine cleaning">✨ Routine cleaning</button>
+            <button class="issue-button" type="button" data-issue="Not sure">🤔 Not sure</button>
+          </div>
+        </div>
+        <aside class="recommendation-card" id="recommendationOutput" aria-live="polite">
+          <span class="eyebrow">Your recommendation</span>
+          <h3 data-recommended-service>Choose an issue to begin</h3>
+          <p data-recommendation-text>CoolNest will suggest the most suitable starting service and carry your selection into the booking form.</p>
+          <a class="btn btn-primary hidden" data-recommendation-link href="booking.html">Continue with this service</a>
+          <p class="tiny" style="margin-top:18px">Safety: for sparks, smoke, burning smells, or electrical concerns, turn off the unit if safe and seek professional support.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="services">
+      <div class="container">
+        <div class="center max-copy">
+          <span class="eyebrow">Residential AC services</span>
+          <h2>A clear service for every type of request.</h2>
+          <p class="lead">All prices below are demonstration placeholders for this fictional project and are not live quotations.</p>
+        </div>
+        <div class="grid-3" style="margin-top:38px">
+          <article class="card"><div class="icon-box">🔎</div><h3>AC Inspection</h3><p class="muted">A structured check for cooling, leaking, smell, or noise concerns.</p><div class="card-footer"><div class="price">AED 149<small>Demo starting price</small></div><a class="btn btn-secondary btn-sm" href="booking.html?service=AC%20Inspection">Book</a></div></article>
+          <article class="card"><div class="icon-box">✨</div><h3>AC Cleaning</h3><p class="muted">Routine cleaning for accessible filters, vents, and internal components.</p><div class="card-footer"><div class="price">AED 189<small>Demo starting price</small></div><a class="btn btn-secondary btn-sm" href="booking.html?service=AC%20Cleaning">Book</a></div></article>
+          <article class="card"><div class="icon-box">🌀</div><h3>Coil Cleaning</h3><p class="muted">Focused cleaning when dirt buildup may be affecting performance.</p><div class="card-footer"><div class="price">AED 279<small>Demo starting price</small></div><a class="btn btn-secondary btn-sm" href="booking.html?service=Coil%20Cleaning">Book</a></div></article>
+          <article class="card"><div class="icon-box">🌬</div><h3>AC Duct Cleaning</h3><p class="muted">A deeper service concept for dust, odour, and airflow concerns across rooms.</p><div class="card-footer"><div class="price">AED 799<small>Demo starting price</small></div><a class="btn btn-secondary btn-sm" href="booking.html?service=AC%20Duct%20Cleaning">Book</a></div></article>
+          <article class="card"><div class="icon-box">🚨</div><h3>Emergency AC Repair</h3><p class="muted">Priority assessment for urgent cooling loss or active leaking.</p><div class="card-footer"><div class="price">AED 249<small>Demo starting price</small></div><a class="btn btn-secondary btn-sm" href="booking.html?service=Emergency%20Repair&urgency=Emergency">Book</a></div></article>
+          <article class="card"><div class="icon-box">📅</div><h3>Annual Care Plan</h3><p class="muted">Scheduled visits and maintenance reminders for household AC units.</p><div class="card-footer"><div class="price">AED 899<small>Demo plan price</small></div><a class="btn btn-secondary btn-sm" href="booking.html?service=Annual%20Care%20Plan">Enquire</a></div></article>
+          <article class="card"><div class="icon-box">🏢</div><h3>Property Manager Plan</h3><p class="muted">A maintenance concept for landlords, holiday homes, and multiple properties.</p><div class="card-footer"><div class="price">AED 1,499<small>Demo plan price</small></div><a class="btn btn-secondary btn-sm" href="booking.html?service=Property%20Manager%20Plan">Enquire</a></div></article>
+        </div>
+        <div class="center" style="margin-top:30px"><a class="btn btn-ghost" href="services.html">Compare all services</a></div>
+      </div>
+    </section>
+
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <div class="center max-copy"><span class="eyebrow">How it works</span><h2>From AC problem to organised appointment.</h2></div>
+        <div class="grid-4 step-row" style="margin-top:40px">
+          <article class="step-card"><h3>Tell us what is wrong</h3><p class="muted">Choose a service or describe the symptom in your own words.</p></article>
+          <article class="step-card"><h3>Choose an appointment</h3><p class="muted">Select a preferred date and an example time window.</p></article>
+          <article class="step-card"><h3>A technician visits</h3><p class="muted">CoolNest reviews the request and confirms the visit details.</p></article>
+          <article class="step-card"><h3>Receive updates</h3><p class="muted">The prototype demonstrates reminders, status updates, and future maintenance prompts.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-ice" id="care-plans">
+      <div class="container">
+        <div class="center max-copy"><span class="eyebrow">Demo care plans</span><h2>Maintenance designed around the property.</h2><p class="lead">These plan names, inclusions, and prices are concept content only.</p></div>
+        <div class="grid-3" style="margin-top:40px">
+          <article class="card plan-card"><span class="eyebrow prototype-badge">Demo plan</span><h3 style="margin-top:16px">Apartment Essential</h3><div class="price">AED 899<small>Illustrative annual price</small></div><ul class="plan-list"><li>Two scheduled maintenance visits</li><li>Digital service history</li><li>Maintenance reminders</li><li>For up to two AC units</li></ul><a class="btn btn-secondary btn-block" href="booking.html?service=Annual%20Care%20Plan">Ask about this plan</a></article>
+          <article class="card plan-card featured"><span class="eyebrow">Most flexible concept</span><h3 style="margin-top:16px">Villa Comfort</h3><div class="price">AED 1,699<small>Illustrative annual price</small></div><ul class="plan-list"><li>Three scheduled maintenance visits</li><li>Multi-unit visit planning</li><li>Priority request review</li><li>Service and renewal reminders</li></ul><a class="btn btn-primary btn-block" href="booking.html?service=Annual%20Care%20Plan&property=Villa">Ask about this plan</a></article>
+          <article class="card plan-card"><span class="eyebrow prototype-badge">Demo plan</span><h3 style="margin-top:16px">Property Partner</h3><div class="price">Custom<small>Based on property needs</small></div><ul class="plan-list"><li>Multiple property records</li><li>Central booking overview</li><li>Recurring maintenance concepts</li><li>Designed for managers and landlords</li></ul><a class="btn btn-secondary btn-block" href="booking.html?service=Property%20Manager%20Plan">Request a plan discussion</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container grid-2">
+        <div><span class="eyebrow">Why CoolNest</span><h2>A calmer way to organise home AC care.</h2><p class="lead">CoolNest is a fictional modern service brand designed to replace unclear calls and scattered messages with a structured customer experience.</p><a class="btn btn-primary" href="booking.html">Start a booking</a></div>
+        <div class="grid-2">
+          <article class="card-flat"><div class="icon-box">🧭</div><h3>Clear booking process</h3><p class="muted">Customers know what details are needed before submitting.</p></article>
+          <article class="card-flat"><div class="icon-box">🔔</div><h3>Service reminders</h3><p class="muted">Workflow concepts keep appointments and maintenance visible.</p></article>
+          <article class="card-flat"><div class="icon-box">🏠</div><h3>Residential specialists</h3><p class="muted">The experience is written for apartments, villas, and managed homes.</p></article>
+          <article class="card-flat"><div class="icon-box">📋</div><h3>Organised history</h3><p class="muted">Booking details and statuses are centralised in the dashboard.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint">
+      <div class="container assistant-preview">
+        <div><span class="eyebrow">Simulated customer assistant</span><h2>Meet Nora.</h2><p class="lead">Nora asks a few practical questions, recognises common AC concerns, and sends the customer into the booking flow with useful details already selected.</p><p class="muted small">Nora uses predefined browser logic. It is not connected to an external AI service and does not make confirmed technical diagnoses.</p><button class="btn btn-primary" type="button" onclick="document.getElementById('chatLauncher').click()">Open Nora</button></div>
+        <div class="preview-chat" aria-hidden="true"><div class="preview-chat-head"><span class="avatar">N</span><div><strong>Nora</strong><div class="tiny">CoolNest Assistant</div></div></div><div class="preview-chat-body"><div class="bubble-preview">What is happening with your AC?</div><div class="bubble-preview user">It is leaking water.</div><div class="bubble-preview">An AC Inspection is a sensible starting point. Is the property an apartment or villa?</div></div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container center"><span class="eyebrow prototype-badge">Prototype service coverage</span><h2>Example Dubai service areas.</h2><p class="lead max-copy center">Coverage names are included to demonstrate how a real home-services website could communicate location relevance.</p><div class="area-tags" style="margin-top:28px"><span class="area-tag">Al Barsha</span><span class="area-tag">Dubai Marina</span><span class="area-tag">Jumeirah</span><span class="area-tag">Business Bay</span><span class="area-tag">Downtown Dubai</span><span class="area-tag">Arabian Ranches</span><span class="area-tag">JVC</span><span class="area-tag">Palm Jumeirah</span></div></div>
+    </section>
+
+    <section class="section section-tint">
+      <div class="container"><div class="center max-copy"><span class="eyebrow">Frequently asked questions</span><h2>Useful answers before booking.</h2></div>
+        <div class="faq-list">
+          <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false">What service should I book?<span class="faq-icon">＋</span></button><div class="faq-answer"><p>Use the service finder or Nora for a starting recommendation. Choose “Not sure” when the symptoms are unclear, then describe the issue for review.</p></div></article>
+          <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false">How long does AC cleaning take?<span class="faq-icon">＋</span></button><div class="faq-answer"><p>Timing depends on the service, access, and number of units. This prototype asks for unit count so the team can review the request before confirmation.</p></div></article>
+          <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false">Do you service villas?<span class="faq-icon">＋</span></button><div class="faq-answer"><p>Yes. The concept supports villas, including requests involving several AC units and planned maintenance.</p></div></article>
+          <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false">Can I book several units?<span class="faq-icon">＋</span></button><div class="faq-answer"><p>Yes. Enter the total number of units in the booking form and add any room-specific information in the notes.</p></div></article>
+          <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false">What happens after booking?<span class="faq-icon">＋</span></button><div class="faq-answer"><p>The request is saved, assigned a reference, and displayed in the owner dashboard. Confirmation and WhatsApp messages are simulated in this prototype.</p></div></article>
+          <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false">Is emergency service available?<span class="faq-icon">＋</span></button><div class="faq-answer"><p>The prototype includes an emergency request option. A real company would still need to confirm technician availability and arrival timing.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section"><div class="container"><div class="cta-band"><div class="max-copy"><span class="eyebrow" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.18);color:#fff">Cleaner air. Reliable cooling. Zero hassle.</span><h2 style="margin-top:18px">Ready to organise your AC service?</h2><p class="lead">Choose a service, appointment window, and contact preference in one structured request.</p><div class="button-row"><a class="btn btn-primary" href="booking.html">Book an AC Service</a><a class="btn btn-secondary" href="case-study.html">Read the Sliubar case study</a></div></div></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid"><div><a class="logo" href="index.html"><span class="logo-mark">❄</span><span>CoolNest AC Care</span></a><p class="small" style="margin-top:16px">A fictional residential AC service concept created to demonstrate Sliubar’s web, booking, assistant, automation, and dashboard capabilities.</p></div><div><h4>Explore</h4><div class="footer-links"><a href="index.html">Home</a><a href="services.html">Services</a><a href="booking.html">Booking</a></div></div><div><h4>Prototype</h4><div class="footer-links"><a href="dashboard.html">Owner Dashboard</a><a href="case-study.html">Sliubar Case Study</a><a href="#diagnose">Service Finder</a></div></div><div><h4>Important</h4><p class="small">CoolNest is not a real company. Pricing, areas, plans, and workflows are demonstration content.</p></div></div><div class="footer-bottom"><span>© <span data-current-year></span> CoolNest concept.</span><span>Designed as a fictional Sliubar portfolio project.</span></div></div></footer>
+
+  <button class="chat-launcher" id="chatLauncher" type="button" aria-label="Open Nora, the CoolNest Assistant" aria-expanded="false">💬</button>
+  <section class="chat-window" id="chatWindow" aria-label="Nora, the CoolNest Assistant">
+    <header class="chat-header"><span class="avatar">N</span><div class="chat-title"><strong>Nora</strong><small>CoolNest Assistant · simulated</small></div><button class="icon-button" type="button" data-chat-restart aria-label="Restart conversation">↻</button><button class="icon-button" type="button" data-chat-minimize aria-label="Minimise chat">—</button><button class="icon-button" type="button" data-chat-close aria-label="Close chat">×</button></header>
+    <div class="chat-body" id="chatBody" aria-live="polite"></div>
+    <form class="chat-input-area" id="chatForm"><div class="chat-input-row"><label class="hidden" for="chatInput">Message Nora</label><input id="chatInput" type="text" autocomplete="off" placeholder="Describe the AC problem…"><button type="submit" aria-label="Send message">➤</button></div><p class="chat-safety">For sparks, smoke, burning smells, or electrical concerns, turn off the unit if safe and seek professional support.</p></form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

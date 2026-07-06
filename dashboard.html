@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CoolNest AC Care fictional owner dashboard prototype.">
+  <title>Owner Dashboard | CoolNest AC Care</title><link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-page">
+<a class="skip-link" href="#dashboardMain">Skip to dashboard</a>
+<section class="login-shell" id="dashboardLogin">
+  <div class="login-card">
+    <a class="logo" href="index.html"><span class="logo-mark">❄</span><span>CoolNest AC Care</span></a>
+    <span class="eyebrow prototype-badge" style="margin-top:28px">Prototype access</span>
+    <h1 style="font-size:2.25rem;margin-top:14px">Owner dashboard</h1>
+    <p class="muted">This login screen demonstrates how an internal workspace could be separated from the public website. It is not secure authentication.</p>
+    <div class="demo-credentials"><strong>Demo credentials</strong><br>Email: <code>owner@coolnest.demo</code><br>Password: <code>demo123</code></div>
+    <form id="dashboardLoginForm" novalidate>
+      <div class="form-group"><label for="dashboardEmail">Email</label><input id="dashboardEmail" name="email" type="email" autocomplete="username" value="owner@coolnest.demo" required></div>
+      <div class="form-group" style="margin-top:14px"><label for="dashboardPassword">Password</label><input id="dashboardPassword" name="password" type="password" autocomplete="current-password" value="demo123" required></div>
+      <p class="field-error" id="dashboardLoginError" aria-live="polite"></p>
+      <button class="btn btn-primary btn-block" type="submit">Open dashboard</button>
+    </form>
+    <a class="btn btn-ghost btn-block" href="index.html" style="margin-top:10px">Return to website</a>
+  </div>
+</section>
+
+<div class="dashboard-shell hidden" id="dashboardContent">
+  <aside class="dashboard-sidebar">
+    <a class="logo" href="index.html"><span class="logo-mark">❄</span><span>CoolNest</span></a>
+    <nav class="dashboard-nav" aria-label="Dashboard navigation">
+      <a class="active" href="#overview">Overview</a><a href="#bookings">Bookings</a><a href="#analytics">Analytics</a><a href="#reminders">Reminders</a><a href="#automations">Automations</a><a href="case-study.html">Case Study</a><a href="index.html">Public Website</a>
+    </nav>
+  </aside>
+  <main class="dashboard-main" id="dashboardMain">
+    <header class="dashboard-top"><div><span class="eyebrow prototype-badge">Internal prototype</span><h1 style="font-size:2.4rem;margin-top:10px">Good morning, CoolNest.</h1><p class="muted">A local overview of leads, appointments, and service workflow concepts.</p></div><button class="btn btn-secondary" id="dashboardLogout" type="button">Log out</button></header>
+
+    <section id="overview" aria-labelledby="overviewTitle"><div class="dashboard-section-head"><div><h2 id="overviewTitle" style="font-size:1.55rem">Business overview</h2><p class="muted small">Figures update from bookings stored in this browser.</p></div><span class="demo-pill">Demo analytics</span></div>
+      <div class="stat-grid">
+        <article class="stat-card"><div class="stat-value" data-stat="total">0</div><div class="stat-label">Total bookings</div></article>
+        <article class="stat-card"><div class="stat-value" data-stat="new">0</div><div class="stat-label">New requests</div></article>
+        <article class="stat-card"><div class="stat-value" data-stat="confirmed">0</div><div class="stat-label">Confirmed appointments</div></article>
+        <article class="stat-card"><div class="stat-value" data-stat="completed">0</div><div class="stat-label">Completed jobs</div></article>
+        <article class="stat-card"><div class="stat-value" data-stat="emergencies">0</div><div class="stat-label">Emergency requests</div></article>
+        <article class="stat-card"><div class="stat-value" data-stat="revenue">AED 0</div><div class="stat-label">Estimated demo revenue</div></article>
+      </div>
+    </section>
+
+    <section class="dashboard-section" id="bookings" aria-labelledby="bookingsTitle">
+      <div class="dashboard-section-head"><div><h2 id="bookingsTitle" style="font-size:1.55rem">Bookings</h2><p class="muted small">View, filter, update, or delete local prototype records.</p></div><div class="button-row"><button class="btn btn-primary btn-sm" id="loadDemoBookings" type="button">Load Demo Bookings</button><button class="btn btn-secondary btn-sm" id="clearDemoBookings" type="button">Clear Demo Data</button></div></div>
+      <div class="dashboard-filters"><div class="form-group"><label for="bookingSearch">Search</label><input id="bookingSearch" type="search" placeholder="Reference, customer, service, area…"></div><div class="form-group"><label for="statusFilter">Status</label><select id="statusFilter"><option value="">All statuses</option><option>New</option><option>Contacted</option><option>Confirmed</option><option>Technician Assigned</option><option>In Progress</option><option>Completed</option><option>Cancelled</option></select></div><div class="form-group"><label for="urgencyFilter">Urgency</label><select id="urgencyFilter"><option value="">All urgency levels</option><option>Routine</option><option>Within a few days</option><option>As soon as possible</option><option>Emergency</option></select></div><div class="form-group"><label for="sortBookings">Sort</label><select id="sortBookings"><option value="newest">Newest first</option><option value="oldest">Oldest first</option></select></div></div>
+      <div class="table-wrap"><table class="dashboard-table"><thead><tr><th>Reference</th><th>Customer</th><th>Service</th><th>Area</th><th>Appointment</th><th>Urgency</th><th>Status</th><th>Actions</th></tr></thead><tbody id="bookingTableBody"></tbody></table></div>
+      <div class="empty-state" id="dashboardEmpty"><div class="icon-box" style="margin-inline:auto">📭</div><h3>No bookings yet</h3><p>Create a booking through the public flow or load realistic demonstration records.</p><div class="button-row" style="justify-content:center"><a class="btn btn-secondary" href="booking.html">Create booking</a><button class="btn btn-primary" type="button" onclick="document.getElementById('loadDemoBookings').click()">Load Demo Bookings</button></div></div>
+    </section>
+
+    <section class="dashboard-section" id="analytics" aria-labelledby="analyticsTitle"><div class="dashboard-section-head"><div><h2 id="analyticsTitle" style="font-size:1.55rem">Dashboard analytics</h2><p class="muted small">Simple visual summaries generated without a chart library.</p></div><span class="demo-pill">Local data</span></div><div class="analytics-grid"><article class="card-flat"><h3>Bookings by service</h3><div class="chart-list" id="serviceChart"></div></article><article class="card-flat"><h3>Bookings by status</h3><div class="chart-list" id="statusChart"></div></article><article class="card-flat"><h3>Most requested areas</h3><div class="chart-list" id="areaChart"></div></article><article class="card-flat"><h3>Emergency vs routine</h3><div class="chart-list" id="urgencyChart"></div></article></div></section>
+
+    <section class="dashboard-section" id="reminders" aria-labelledby="remindersTitle"><div class="dashboard-section-head"><div><h2 id="remindersTitle" style="font-size:1.55rem">Maintenance reminders</h2><p class="muted small">Completed jobs can become future follow-up opportunities.</p></div><span class="demo-pill">Simulated dates</span></div><div class="reminder-grid" id="maintenanceReminders"></div></section>
+
+    <section class="dashboard-section" id="automations" aria-labelledby="automationsTitle"><div class="dashboard-section-head"><div><h2 id="automationsTitle" style="font-size:1.55rem">Example customer automations</h2><p class="muted small">Workflow designs only. No live email, WhatsApp, or technician integrations are connected.</p></div><span class="demo-pill">Concept flows</span></div><div class="grid-3"><article class="card-flat"><div class="icon-box">📥</div><h3>After booking</h3><ul class="check-list"><li>Booking confirmation</li><li>Internal owner notification</li><li>Customer request summary</li><li>Appointment reminder scheduled</li></ul></article><article class="card-flat"><div class="icon-box">🗓</div><h3>Before appointment</h3><ul class="check-list"><li>One-day reminder</li><li>Technician assignment update</li><li>Arrival window notification</li><li>Access instructions surfaced</li></ul></article><article class="card-flat"><div class="icon-box">✅</div><h3>After service</h3><ul class="check-list"><li>Completion message</li><li>Review request</li><li>Maintenance reminder</li><li>Annual plan follow-up</li></ul></article></div></section>
+
+    <footer class="footer-bottom" style="color:var(--muted);margin-top:28px"><span>CoolNest owner dashboard prototype</span><span>Data remains in this browser.</span></footer>
+  </main>
+</div>
+
+<div class="detail-drawer" id="bookingDrawer" role="dialog" aria-modal="true" aria-labelledby="drawerReference"><section class="drawer-panel"><header class="drawer-head"><div><span class="eyebrow">Booking detail</span><h2 id="drawerReference" style="font-size:1.65rem;margin-top:10px">Reference</h2></div><button class="icon-button" type="button" data-close-drawer aria-label="Close booking details">×</button></header><div class="form-group"><label for="drawerStatus">Update status</label><select id="drawerStatus"><option>New</option><option>Contacted</option><option>Confirmed</option><option>Technician Assigned</option><option>In Progress</option><option>Completed</option><option>Cancelled</option></select></div><div id="drawerContent" style="margin-top:22px"></div></section></div>
+<script src="script.js"></script>
+</body></html>

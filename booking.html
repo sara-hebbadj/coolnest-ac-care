@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Request a fictional CoolNest AC Care appointment using the smart multi-step booking demo.">
+  <title>Book an AC Service | CoolNest AC Care</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container nav-wrap"><a class="logo" href="index.html"><span class="logo-mark">❄</span><span>CoolNest AC Care</span></a><button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button><nav class="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="services.html">Services</a><a href="index.html#how-it-works">How It Works</a><a href="index.html#care-plans">Care Plans</a><a href="index.html#about">About</a><a class="btn btn-primary btn-sm" href="booking.html" aria-current="page">Book a Service</a><a href="dashboard.html">Owner Dashboard</a></nav></div></header>
+<main id="main">
+<section class="page-hero"><div class="container"><div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Booking</span></div><span class="eyebrow prototype-badge">Interactive prototype</span><h1>Request an AC appointment.</h1><p class="lead max-copy">Complete the five short steps below. Your request is saved only in this browser and appears in the prototype owner dashboard.</p></div></section>
+<section class="section section-tint"><div class="container booking-layout">
+  <form class="booking-card" id="bookingForm" novalidate>
+    <div class="progress-steps" aria-label="Booking progress">
+      <div class="progress-step active"><span>Service</span></div><div class="progress-step"><span>Property</span></div><div class="progress-step"><span>Appointment</span></div><div class="progress-step"><span>Contact</span></div><div class="progress-step"><span>Review</span></div>
+    </div>
+
+    <section class="form-step active" aria-labelledby="step1Title">
+      <span class="eyebrow">Step 1 of 5</span><h2 id="step1Title" style="margin-top:14px">Choose a service</h2><p class="muted">Choose the closest option. “Not sure” is completely fine.</p>
+      <div class="choice-grid">
+        <div class="choice-card"><input id="serviceInspection" type="radio" name="service" value="AC Inspection" required><label for="serviceInspection"><strong>🔎 AC Inspection</strong><br><span class="small muted">For unclear cooling, leaking, or noise issues.</span></label></div>
+        <div class="choice-card"><input id="serviceCleaning" type="radio" name="service" value="AC Cleaning" required><label for="serviceCleaning"><strong>✨ AC Cleaning</strong><br><span class="small muted">Routine cleaning for accessible components.</span></label></div>
+        <div class="choice-card"><input id="serviceCoil" type="radio" name="service" value="Coil Cleaning" required><label for="serviceCoil"><strong>🌀 Coil Cleaning</strong><br><span class="small muted">Focused cleaning for coil buildup.</span></label></div>
+        <div class="choice-card"><input id="serviceDuct" type="radio" name="service" value="AC Duct Cleaning" required><label for="serviceDuct"><strong>🌬 AC Duct Cleaning</strong><br><span class="small muted">For wider dust, odour, or airflow concerns.</span></label></div>
+        <div class="choice-card"><input id="serviceEmergency" type="radio" name="service" value="Emergency Repair" required><label for="serviceEmergency"><strong>🚨 Emergency Repair</strong><br><span class="small muted">Priority review for urgent AC problems.</span></label></div>
+        <div class="choice-card"><input id="serviceAnnual" type="radio" name="service" value="Annual Care Plan" required><label for="serviceAnnual"><strong>📅 Annual Care Plan</strong><br><span class="small muted">Scheduled household maintenance concept.</span></label></div>
+        <div class="choice-card"><input id="serviceManager" type="radio" name="service" value="Property Manager Plan" required><label for="serviceManager"><strong>🏢 Property Manager Plan</strong><br><span class="small muted">For landlords and managed properties.</span></label></div>
+        <div class="choice-card"><input id="serviceUnsure" type="radio" name="service" value="Not sure" required><label for="serviceUnsure"><strong>🤔 Not sure</strong><br><span class="small muted">Describe the issue for team review.</span></label></div>
+      </div>
+      <div class="field-error" data-error-for="service"></div>
+      <div class="form-actions"><span></span><button class="btn btn-primary" type="button" data-next-step>Continue to property details</button></div>
+    </section>
+
+    <section class="form-step" aria-labelledby="step2Title">
+      <span class="eyebrow">Step 2 of 5</span><h2 id="step2Title" style="margin-top:14px">Tell us about the property</h2><p class="muted">These details help organise the request before availability is confirmed.</p>
+      <div class="form-grid">
+        <div class="form-group"><label for="propertyType">Property type</label><select id="propertyType" name="propertyType" required><option value="">Choose one</option><option>Apartment</option><option>Villa</option></select><span class="field-error" data-error-for="propertyType"></span></div>
+        <div class="form-group"><label for="units">Number of AC units</label><input id="units" name="units" type="number" min="1" max="50" inputmode="numeric" required placeholder="For example, 2"><span class="field-error" data-error-for="units"></span></div>
+        <div class="form-group"><label for="area">Dubai area</label><select id="area" name="area" required><option value="">Choose an area</option><option>Al Barsha</option><option>Dubai Marina</option><option>Jumeirah</option><option>Business Bay</option><option>Downtown Dubai</option><option>Arabian Ranches</option><option>JVC</option><option>Palm Jumeirah</option><option>Other Dubai area</option></select><span class="field-error" data-error-for="area"></span></div>
+        <div class="form-group"><label for="community">Building or community name</label><input id="community" name="community" type="text" required placeholder="Building, tower, or community"><span class="field-error" data-error-for="community"></span></div>
+        <div class="form-group full"><label for="problemDescription">What is happening?</label><textarea id="problemDescription" name="problemDescription" required placeholder="Describe the symptom, when it started, and which rooms or units are affected."></textarea><span class="field-error" data-error-for="problemDescription"></span></div>
+        <div class="form-group full"><label for="urgency">Urgency level</label><select id="urgency" name="urgency" required><option value="">Choose urgency</option><option>Routine</option><option>Within a few days</option><option>As soon as possible</option><option>Emergency</option></select><span class="field-error" data-error-for="urgency"></span></div>
+      </div>
+      <div class="alert alert-info small">For sparks, smoke, burning smells, or electrical concerns, turn off the unit if safe and seek professional support. Do not continue running the unit.</div>
+      <div class="form-actions"><button class="btn btn-secondary" type="button" data-prev-step>Back</button><button class="btn btn-primary" type="button" data-next-step>Continue to appointment</button></div>
+    </section>
+
+    <section class="form-step" aria-labelledby="step3Title">
+      <span class="eyebrow">Step 3 of 5</span><h2 id="step3Title" style="margin-top:14px">Choose a preferred appointment</h2><p class="muted">This is a request only. A real service team would confirm the final appointment.</p>
+      <div class="form-grid">
+        <div class="form-group full"><label for="appointmentDate">Preferred date</label><input id="appointmentDate" name="appointmentDate" type="date" required><span class="field-error" data-error-for="appointmentDate"></span></div>
+        <div class="form-group full"><label for="timeSlot">Preferred time slot</label><select id="timeSlot" name="timeSlot" required><option value="">Choose a time slot</option><option>9:00 AM – 11:00 AM</option><option>11:00 AM – 1:00 PM</option><option>1:00 PM – 3:00 PM</option><option>3:00 PM – 5:00 PM</option><option>5:00 PM – 7:00 PM</option></select><span class="field-error" data-error-for="timeSlot"></span></div>
+      </div>
+      <div class="form-actions"><button class="btn btn-secondary" type="button" data-prev-step>Back</button><button class="btn btn-primary" type="button" data-next-step>Continue to contact details</button></div>
+    </section>
+
+    <section class="form-step" aria-labelledby="step4Title">
+      <span class="eyebrow">Step 4 of 5</span><h2 id="step4Title" style="margin-top:14px">Add your contact details</h2><p class="muted">This prototype does not send real emails, calls, or WhatsApp messages.</p>
+      <div class="form-grid">
+        <div class="form-group full"><label for="fullName">Full name</label><input id="fullName" name="fullName" type="text" autocomplete="name" required placeholder="Your full name"><span class="field-error" data-error-for="fullName"></span></div>
+        <div class="form-group"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="+971 50 000 0000"><span class="field-error" data-error-for="phone"></span></div>
+        <div class="form-group"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="name@example.com"><span class="field-error" data-error-for="email"></span></div>
+        <div class="form-group full"><label for="contactMethod">Preferred contact method</label><select id="contactMethod" name="contactMethod" required><option value="">Choose one</option><option>WhatsApp</option><option>Phone</option><option>Email</option></select><span class="field-error" data-error-for="contactMethod"></span></div>
+        <div class="form-group full"><label for="notes">Optional notes</label><textarea id="notes" name="notes" placeholder="Access instructions, parking, pets, room details, or anything else that may help."></textarea><span class="field-error" data-error-for="notes"></span></div>
+      </div>
+      <div class="form-actions"><button class="btn btn-secondary" type="button" data-prev-step>Back</button><button class="btn btn-primary" type="button" data-next-step>Review booking</button></div>
+    </section>
+
+    <section class="form-step" aria-labelledby="step5Title">
+      <span class="eyebrow">Step 5 of 5</span><h2 id="step5Title" style="margin-top:14px">Review your request</h2><p class="muted">Check the details before saving the prototype booking.</p>
+      <div id="bookingReview"></div>
+      <div class="alert alert-info small">By submitting, you are creating a local demonstration record. No payment is taken and no real company is contacted.</div>
+      <div class="form-actions"><button class="btn btn-secondary" type="button" data-prev-step>Back and edit</button><button class="btn btn-primary" type="submit">Submit booking request</button></div>
+    </section>
+  </form>
+
+  <aside class="booking-sidebar">
+    <div class="card-flat"><span class="eyebrow">Live summary</span><h3 style="margin-top:16px">Your booking</h3><dl class="summary-list"><div class="summary-row"><dt>Service</dt><dd data-booking-summary="service">Not selected</dd></div><div class="summary-row"><dt>Property</dt><dd data-booking-summary="property">Not added</dd></div><div class="summary-row"><dt>Units</dt><dd data-booking-summary="units">—</dd></div><div class="summary-row"><dt>Area</dt><dd data-booking-summary="area">Not added</dd></div><div class="summary-row"><dt>Date</dt><dd data-booking-summary="date">Not selected</dd></div><div class="summary-row"><dt>Time</dt><dd data-booking-summary="time">Not selected</dd></div></dl></div>
+    <div class="card-flat" style="margin-top:18px"><h3>Prototype note</h3><p class="small muted">Your booking is saved in browser localStorage. It stays on this device until you delete it or clear browser storage.</p><a class="btn btn-ghost btn-block" href="dashboard.html">Open owner dashboard</a></div>
+  </aside>
+</div></section>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><a class="logo" href="index.html"><span class="logo-mark">❄</span><span>CoolNest AC Care</span></a><p class="small" style="margin-top:16px">A fictional residential AC service concept created to demonstrate Sliubar’s digital service capabilities.</p></div><div><h4>Explore</h4><div class="footer-links"><a href="index.html">Home</a><a href="services.html">Services</a><a href="booking.html">Booking</a></div></div><div><h4>Prototype</h4><div class="footer-links"><a href="dashboard.html">Owner Dashboard</a><a href="case-study.html">Sliubar Case Study</a></div></div><div><h4>Important</h4><p class="small">No real appointment or notification is created. This is a local browser demo.</p></div></div><div class="footer-bottom"><span>© <span data-current-year></span> CoolNest concept.</span><span>Designed as a fictional Sliubar portfolio project.</span></div></div></footer>
+<button class="chat-launcher" id="chatLauncher" type="button" aria-label="Open Nora, the CoolNest Assistant" aria-expanded="false">💬</button><section class="chat-window" id="chatWindow" aria-label="Nora, the CoolNest Assistant"><header class="chat-header"><span class="avatar">N</span><div class="chat-title"><strong>Nora</strong><small>CoolNest Assistant · simulated</small></div><button class="icon-button" type="button" data-chat-restart aria-label="Restart conversation">↻</button><button class="icon-button" type="button" data-chat-minimize aria-label="Minimise chat">—</button><button class="icon-button" type="button" data-chat-close aria-label="Close chat">×</button></header><div class="chat-body" id="chatBody" aria-live="polite"></div><form class="chat-input-area" id="chatForm"><div class="chat-input-row"><label class="hidden" for="chatInput">Message Nora</label><input id="chatInput" type="text" autocomplete="off" placeholder="Describe the AC problem…"><button type="submit" aria-label="Send message">➤</button></div><p class="chat-safety">For sparks, smoke, burning smells, or electrical concerns, turn off the unit if safe and seek professional support.</p></form></section>
+<script src="script.js"></script>
+</body></html>

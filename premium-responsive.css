@@ -1,0 +1,45 @@
+@media (max-width: 980px) {
+  .container { width: min(100% - 34px, var(--container)); }
+  .section { padding: 84px 0; }
+  .nav-toggle { display: block; }
+  .site-nav { position: absolute; left: 17px; right: 17px; top: calc(100% + 9px); display: none; flex-direction: column; align-items: stretch; gap: 3px; padding: 16px; border: 1px solid var(--line); border-radius: 20px; background: #fff; box-shadow: var(--shadow-md); }
+  .site-nav.open { display: flex; }
+  .site-nav a { padding: 10px 11px !important; }
+  .site-nav a::after { display: none; }
+  .hero-grid, .diagnosis-wrap, .assistant-preview, .booking-layout, .service-detail { grid-template-columns: 1fr; }
+  .hero-grid { gap: 36px; padding: 70px 0 88px; }
+  .hero-visual { min-height: 500px; }
+  .recommendation-card, .booking-sidebar, .service-summary { position: static; }
+  .grid-4 { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .footer-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .dashboard-shell { grid-template-columns: 1fr; }
+  .dashboard-sidebar { position: static; height: auto; }
+  .dashboard-nav { flex-direction: row; overflow-x: auto; }
+  .dashboard-main { padding: 24px; }
+  .flow-line { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+
+@media (max-width: 720px) {
+  .container { width: min(100% - 28px, var(--container)); }
+  .section { padding: 70px 0; }
+  h1 { font-size: clamp(2.7rem, 13vw, 4.2rem); }
+  h2 { font-size: clamp(2rem, 9vw, 3rem); }
+  .hero-grid { padding: 58px 0 74px; }
+  .hero-copy h1 { font-size: clamp(3rem, 13vw, 4.5rem); }
+  .hero-visual { min-height: 420px; }
+  .visual-shell { inset: 18px 8px 28px; border-radius: 30px; }
+  .card-c { display: none; }
+  .grid-2, .grid-3, .grid-4, .choice-grid, .form-grid, .analytics-grid, .reminder-grid, .scope-grid, .before-after, .issue-grid { grid-template-columns: 1fr; }
+  .assistant-preview, .cta-band { padding: 32px 24px; border-radius: 28px; }
+  .page-hero { padding: 80px 0 70px; }
+  .booking-card { padding: 24px 18px; }
+  .progress-step span { display: none; }
+  .form-group.full { grid-column: auto; }
+  .form-actions { flex-direction: column-reverse; align-items: stretch; }
+  .form-actions .btn { width: 100%; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .dashboard-main { padding: 16px; }
+  .stat-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .dashboard-filters, .detail-columns, .flow-line { grid-template-columns: 1fr; }
+}
